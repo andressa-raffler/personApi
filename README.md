@@ -5,7 +5,7 @@
 Neste repositório desenvolvi um pequeno sistema para o gerenciamento de pessoas de uma empresa através de uma API REST, criada com o Spring Boot.
 
 Para executar o projeto, acesse o seguinte link:
-https://people-register-api.herokuapp.com
+https://people-register-api.herokuapp.com/api/v1/people
 
 Os métodos http implantados sao os seguintes:
 
