@@ -9,11 +9,11 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Person {
 
     @Id
@@ -29,10 +29,8 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-//    @Column(nullable = false)
-//    private LocalDate birthDate;
+    private LocalDate birthDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}) //informa o cascade no momento de fazer o persist, de fazer o merge e de remover
+    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones;
-
 }
